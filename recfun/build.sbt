@@ -71,3 +71,5 @@ assignmentsMap := {
       options = Map("grader-timeout" -> "1800"))
   )
 }
+
+enablePlugins(ScalafmtPlugin)
