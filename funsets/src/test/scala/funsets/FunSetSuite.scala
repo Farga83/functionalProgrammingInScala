@@ -85,6 +85,28 @@ class FunSetSuite extends FunSuite {
     assert(!contains(s, 2))
   }
 
+  test("filter no common") {
+    var s = filter(singletonSet(1), x => x == 2)
+    assert(!contains(s, 1))
+    assert(!contains(s, 2))
+  }
+
+  test("filter common 1") {
+    var s = filter(singletonSet(1), x => x == 1)
+    assert(contains(s, 1))
+    assert(!contains(s, 2))
+  }
+
+  test("forall 1,2 in set, 1 in p, false") {
+    val s = union(singletonSet(1), singletonSet(2))
+    assert(!forall(s, x => x == 1))
+  }
+
+  test("forall 1,2 in set, 1,2 in p, true") {
+    val s = union(singletonSet(1), singletonSet(2))
+    assert(forall(s, x => x == 1 || x == 2))
+  }
+
   trait TestSets {
     val s1 = singletonSet(1)
     val s2 = singletonSet(2)
