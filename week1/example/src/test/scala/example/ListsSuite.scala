@@ -25,7 +25,7 @@ import org.scalatest.junit.JUnitRunner
  */
  @RunWith(classOf[JUnitRunner])
   class ListsSuite extends FunSuite {
- 
+
   /**
    * Tests are written using the `test` operator which takes two arguments:
    *
@@ -37,7 +37,7 @@ import org.scalatest.junit.JUnitRunner
    * which tests that its argument evaluates to `true`. So one of the simplest
    * successful tests is the following:
    */
-  test("one plus one is two")(assert(1 + 1 == 2))
+  test("one plus one is two")(assert(1 + 1 = 2))
 
 
   /**
